@@ -16,15 +16,15 @@
 ### $t(timeString)
 
 ```
-$t("year")
+$t("year");
 ```
 
-### Filter
+### Selector
 
 #### every(time)
 
 ```
-$t("day").every($t("second"))
+$t("day").every($t("second"));
 ```
 
 #### eq(count)
