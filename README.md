@@ -4,6 +4,7 @@
 
 - "century"
 - "year"
+- "month"
 - "week"
 - "day"
 - "hour"
@@ -12,10 +13,10 @@
 
 ### Constructor
 
-### $t(time, date)
+### $t(timeString)
 
 ```
-$t(new Date, "year")
+$t("year")
 ```
 
 ### Filter
@@ -23,22 +24,26 @@ $t(new Date, "year")
 #### every(time)
 
 ```
-every("day").every("second")
+$t("day").every($t("second"))
 ```
 
-#### nth(count)
+#### eq(count)
 
 ```
-nth(10, "century");
+$t("century").eq(10);
 ```
 
 #### first(time)
 
 ```
-every("month").first("day")
+$t("month").first($t("day"));
 ```
 
-every period -> [[day], [day]]
-every year -> [[day], [day]]
-every week -> [[day], [day]]
-every day -> [day]
+#### odd(), even()
+
+#### has(time)
+
+```
+$t("month").has($t("day").eq(31));
+```
+
